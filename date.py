@@ -8,11 +8,7 @@ def Date():
     x = datetime.datetime.now()
     day=x.strftime("%d")
     month=x.strftime("%m")
-    if(day[0]=='0'):
-        day=day[1]
-    if(month[0]=='0'):
-        month=month[1]
-    date=month+'/'+day
+    date=month+'-'+day
     date_dict = {'Date': date} 
     date_dict_ = json.dumps(date_dict)
     return date_dict_
